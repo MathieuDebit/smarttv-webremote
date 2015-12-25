@@ -27,4 +27,10 @@ io.sockets.on('connection', function(socket){
     console.log('New IP defined : ' + ip);
     socket.emit('ip', 'New IP defined : ' + ip);
   });
+
+  socket.on('name', function(name){
+    remote.config.host.name = name;
+    socket.emit('name', 'New Name defined : ' + name)
+    console.log('New Name defined : ' + name);
+  });
 });
