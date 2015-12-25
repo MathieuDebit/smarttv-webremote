@@ -5,6 +5,25 @@ Server-side of the `smarttv-webremote` app.
 
 Based on the [samsung-remote](https://www.github.com/natalan/samsung-remote) package (NodeJS) by [Natalan](https://www.github.com/natalan/).
 
+## Getting started
+
+> NodeJS is required.
+
+```javascript
+npm install
+```
+
+> And of course, a Samsung Smart TV is needed. Tested on model LED46.
+
+## Usage
+
+Start the server :
+```javascript
+node server.js
+```
+
+then connect a client with `socket.io` on http://localhost:8080/.
+
 License
 -----
 Copyright (c) 2015 Mathieu Débit
