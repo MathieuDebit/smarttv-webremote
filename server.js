@@ -13,3 +13,12 @@ var server = http.createServer(app).listen(port, function() {
 });
 
 var io = socket.listen(server);
+
+io.sockets.on('connection', function(socket){
+  console.log('New client connected');
+  socket.emit('welcome', 'hello! You are now connected');
+
+  var remote = new SamsungRemote({
+    ip: '192.168.1.1'
+  });
+});
