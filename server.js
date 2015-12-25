@@ -45,4 +45,17 @@ io.sockets.on('connection', function(socket){
       }
     });
   });
+
+  socket.on('ping', function(){
+    console.log('ping...');
+    remote.isAlive(function(err){
+      if (err) {
+        socket.emit('ping', 'TV Offline (error ' + err + ')');
+        console.log('TV Offline (error ' + err + ')');
+      } else {
+        socket.emit('ping', 'TV Online : ' + remote.config.ip);
+        console.log('TV Online : ' + remote.config.ip);
+      }
+    });
+  })
 });
