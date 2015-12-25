@@ -33,4 +33,16 @@ io.sockets.on('connection', function(socket){
     socket.emit('name', 'New Name defined : ' + name)
     console.log('New Name defined : ' + name);
   });
+
+  socket.on('key', function(key){
+    remote.send(key, function callback(err){
+      if (err) {
+        console.log('Erreur ' + key + ' : ' + err);
+        socket.emit('key', 'Erreur ' + key + ' : ' + err);
+      } else {
+        console.log('Key : ' + key);
+        socket.emit('key', 'Key : ' + key);
+      }
+    });
+  });
 });
