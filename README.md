@@ -1,7 +1,7 @@
 # smarttv-webremote
 ## Control your Samsung Smart TV from the web!
 
-Server-side of the `smarttv-webremote` app.
+Server-side of the `smarttv-webremote` app. Check the client-side [here](https://www.github.com/MathieuDebit/smarttv-webremote-client).
 
 Based on the [samsung-remote](https://www.github.com/natalan/samsung-remote) package (NodeJS) by [Natalan](https://www.github.com/natalan/).
 

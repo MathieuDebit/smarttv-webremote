@@ -37,8 +37,8 @@ io.sockets.on('connection', function(socket){
   socket.on('key', function(key){
     remote.send(key, function callback(err){
       if (err) {
-        console.log('Erreur ' + key + ' : ' + err);
-        socket.emit('key', 'Erreur ' + key + ' : ' + err);
+        console.log('Error ' + key + ' : ' + err);
+        socket.emit('key', 'Error ' + key + ' : ' + err);
       } else {
         console.log('Key : ' + key);
         socket.emit('key', 'Key : ' + key);
@@ -50,11 +50,11 @@ io.sockets.on('connection', function(socket){
     console.log('ping...');
     remote.isAlive(function(err){
       if (err) {
-        socket.emit('ping', 'TV Offline (error ' + err + ')');
-        console.log('TV Offline (error ' + err + ')');
+        socket.emit('ping', 'TV disconnected (error ' + err + ')');
+        console.log('TV disconnected (error ' + err + ')');
       } else {
-        socket.emit('ping', 'TV Online : ' + remote.config.ip);
-        console.log('TV Online : ' + remote.config.ip);
+        socket.emit('ping', 'TV connected : ' + remote.config.ip);
+        console.log('TV connected : ' + remote.config.ip);
       }
     });
   })
