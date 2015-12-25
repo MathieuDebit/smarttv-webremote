@@ -21,4 +21,10 @@ io.sockets.on('connection', function(socket){
   var remote = new SamsungRemote({
     ip: '192.168.1.1'
   });
+
+  socket.on('ip', function(ip){
+    remote.config.ip = ip;
+    console.log('New IP defined : ' + ip);
+    socket.emit('ip', 'New IP defined : ' + ip);
+  });
 });
