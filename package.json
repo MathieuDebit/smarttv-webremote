@@ -1,0 +1,25 @@
+{
+  "name": "smarttv-webremote",
+  "version": "0.1.0",
+  "description": "Web App to remotly control a Samsung Smart TV",
+  "author": {
+    "name": "Mathieu Debit",
+    "email": "mathieu.debit@gmail.com",
+    "url": "http://www.mathieudebit.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mathieudebit/smarttv-webremote"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "dependencies": {
+    "express": "~4.9.7",
+    "socket.io": "^1.1.0",
+    "samsung-remote": "^1.2.4"
+  }
+}
