@@ -1,15 +1,19 @@
 # smarttv-webremote
 ## Control your Samsung Smart TV from the web!
 
-Server-side of the `smarttv-webremote` app. Check the client-side [here](https://www.github.com/MathieuDebit/smarttv-webremote-client).
+**smarttv-webremote** is a Javascript/NodeJS app for remotely control your Samsung Smart TV connected on your local network.
 
-Based on the [samsung-remote](https://www.github.com/natalan/samsung-remote) package (NodeJS) by [Natalan](https://www.github.com/natalan/).
+This repo hosts the server-side (NodeJS) of the app, based on the [samsung-remote](https://www.github.com/natalan/samsung-remote) package by [Natalan](https://www.github.com/natalan/). Check the client-side [here](https://www.github.com/MathieuDebit/smarttv-webremote-client).
 
 ## Getting started
 
-> NodeJS is required.
+> You will need Node.js to run this server. Install and configure it first: [http://nodejs.org/](http://nodejs.org/)
+
+Clone the repo and install dependencies:
 
 ```javascript
+git clone https://github.com/MathieuDebit/smarttv-webremote.git
+cd smarttv-webremote
 npm install
 ```
 
@@ -17,19 +21,27 @@ npm install
 
 ## Usage
 
-Start the server :
+Start the server by running the following command:
 ```javascript
 node server.js
 ```
 
 then connect a client with `socket.io` on http://localhost:8080/.
 
-License
------
-Copyright (c) 2015 Mathieu Débit
+ > Check the **official client of this app [here](https://www.github.com/MathieuDebit/smarttv-webremote-client)**.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+![smarttv-webremote-client interface](http://i.imgur.com/ltkDR9b.jpg)
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+## Contributing
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+> This project is licensed under the terms of the MIT license.
+
+Feel free to contribute to the project by reporting and/or fixing bugs, improving code quality and adding new features.
+
+1. Fork repository
+2. Create a branch following a [successfull branching model](http://nvie.com/posts/a-successful-git-branching-model/)
+3. Write your feature/fix
+4. Pull request
+
+---
+Made with ♥ by [Mathieu Débit](http://www.twitter.com/MathieuDebit).
